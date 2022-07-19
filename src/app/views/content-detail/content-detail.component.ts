@@ -43,7 +43,8 @@ ngOnInit(): void {
             this.choosen=response.mediaId;
             this.commentService.getContentList()
             .subscribe(res=>{
-                          this.allcomments=res;
+                          this.comments=[];
+                          this.comments.length=0;
                           for(var i in res){
                             if(res[i].contentId == response.id){
                               this.comments.push(res[i]);
@@ -94,7 +95,8 @@ ngOnInit(): void {
     this.commentService.postContentInf(this.commentt)
     .subscribe(
       response=>{alert("Success");}
-    );}else alert("Anonymous or empty comments comments are not allowed!")
+    );}else alert("Anonymous or empty comments comments are not allowed!");
+    this.ngOnInit();
   }
 }
 
