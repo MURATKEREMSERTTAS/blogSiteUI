@@ -13,7 +13,7 @@ export class TagService {
 
   constructor(private http:HttpClient) { }
 
-  TagUrl = 'https://b8fb-37-202-49-82.eu.ngrok.io/api/Tags'
+  TagUrl = 'https://localhost:5001/api/Tags'
 
   getTagsList():Observable<Tags[]>{
     return this.http.get<Tags[]>(this.TagUrl);

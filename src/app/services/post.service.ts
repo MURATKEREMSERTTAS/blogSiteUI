@@ -13,7 +13,7 @@ export class PostService {
 
   constructor(private http:HttpClient) { }
   
-  Authorurl = 'https://b8fb-37-202-49-82.eu.ngrok.io/api/Author'
+  Authorurl = 'https://localhost:5001/api/Author'
   getAuthorList():Observable<Authors[]>{
     return this.http.get<Authors[]>(this.Authorurl);
   }

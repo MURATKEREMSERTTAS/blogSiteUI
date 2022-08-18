@@ -13,7 +13,7 @@ export class ContentService {
 
   constructor(private http:HttpClient) { }
 
-  ContentUrl = 'https://b8fb-37-202-49-82.eu.ngrok.io/api/Content'
+  ContentUrl = 'https://localhost:5001/api/Content'
 
   getContentList():Observable<Contents[]>{
     return this.http.get<Contents[]>(this.ContentUrl);

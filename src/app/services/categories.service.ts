@@ -13,7 +13,7 @@ export class CategoriesService {
 
   constructor(private http:HttpClient) { }
   
-  Categoiesurl = 'https://b8fb-37-202-49-82.eu.ngrok.io/api/Categories'
+  Categoiesurl = 'https://localhost:5001/api/Categories'
   getCategoiesList():Observable<Categories[]>{
     return this.http.get<Categories[]>(this.Categoiesurl);
   }
