@@ -13,7 +13,7 @@ export class TagService {
 
   constructor(private http:HttpClient) { }
 
-  TagUrl = 'https://localhost:5001/api/Tags'
+  TagUrl = environment.apiBaseUrl+'/api/Tags'
 
   getTagsList():Observable<Tags[]>{
     return this.http.get<Tags[]>(this.TagUrl);

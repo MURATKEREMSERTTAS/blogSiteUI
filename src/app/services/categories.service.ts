@@ -13,7 +13,7 @@ export class CategoriesService {
 
   constructor(private http:HttpClient) { }
   
-  Categoiesurl = 'https://localhost:5001/api/Categories'
+  Categoiesurl = environment.apiBaseUrl+'/api/Categories'
   getCategoiesList():Observable<Categories[]>{
     return this.http.get<Categories[]>(this.Categoiesurl);
   }

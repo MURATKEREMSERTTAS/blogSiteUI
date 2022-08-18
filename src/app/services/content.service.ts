@@ -13,7 +13,7 @@ export class ContentService {
 
   constructor(private http:HttpClient) { }
 
-  ContentUrl = 'https://localhost:5001/api/Content'
+  ContentUrl = environment.apiBaseUrl+'/api/Content'
 
   getContentList():Observable<Contents[]>{
     return this.http.get<Contents[]>(this.ContentUrl);

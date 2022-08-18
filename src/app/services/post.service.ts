@@ -13,7 +13,7 @@ export class PostService {
 
   constructor(private http:HttpClient) { }
   
-  Authorurl = 'https://localhost:5001/api/Author'
+  Authorurl = environment.apiBaseUrl+'/api/Author'
   getAuthorList():Observable<Authors[]>{
     return this.http.get<Authors[]>(this.Authorurl);
   }
