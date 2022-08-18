@@ -13,7 +13,7 @@ export class CommentsService {
 
   constructor(private http:HttpClient) { }
 
-  CommentUrl = environment.apiBaseUrl+'api/Comments'
+  CommentUrl = 'https://localhost:5001/api/Comments'
 
   getContentList():Observable<Comments[]>{
     return this.http.get<Comments[]>(this.CommentUrl);  
