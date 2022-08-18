@@ -2,8 +2,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { NewSetting } from '../models/Settings/NewSetting';
-import { Setting } from '../models/Settings/Setting';
+import { NewSetting } from '../models/Settings/NewSettings';
+import { Setting } from '../models/Settings/Settings';
 import { UpdateSetting } from '../models/Settings/UpdateSetting';
 
 @Injectable({
